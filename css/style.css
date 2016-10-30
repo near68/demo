@@ -1,0 +1,148 @@
+@charset "utf-8";
+*{margin: 0; padding: 0; border: 0;text-decoration:none;font-size:12px; font-family: "microsoft YaHei","微软雅黑"}
+ul li{
+	list-style: none;
+}
+body{
+	/*background: url(../img/bgimg.png);*/
+	background-color: #f2f2f2;
+}
+
+.main{
+	overflow: auto;
+}
+.nav{
+	min-height: 400px;
+	background-color: #222;
+	background: url(../img/P40.jpg) no-repeat;
+	background-size: cover;
+}
+.nav_cont{
+	width: 1200px;
+	margin: 0 auto;
+}
+.nav ul li{
+	float: left;
+	padding-left: 25px;	
+}
+.nav ul li a{
+	font-size: 16px;
+	line-height: 45px;
+	color: #ddd;
+	text-align: center;
+}
+.nav ul li a:hover{
+	color: #fff;
+}
+#timer{
+	float: right;
+	color: #fff;
+	line-height: 45px;
+	margin-right: 15px;
+}
+.content{
+	max-width: 1200px;
+	margin: 0 auto;
+	overflow: auto;
+}
+.con_list{
+	max-width: 1200px;
+	margin: 12px auto;
+	overflow: auto;
+}
+
+.img_cont{
+	float: left;
+	margin: 12px;
+	border: 1px solid #ddd;
+	background-color: #fff;
+	border-radius: 3px;
+	box-shadow: 1px 1px 1px #eee;
+}
+.img_cont:hover{
+	box-shadow: 3px 3px 8px #ccc;
+}
+.img_cont img{
+	max-width: 550px;
+	padding: 12px;
+}
+/*footer*/
+.footer{
+	width: 100%;
+	height: 80px;
+	margin-top: 20px;
+	background-color: #222;
+}
+#endtime{
+	text-align: center;
+	font-size: 20px;
+	color: #fff;
+	line-height: 80px;
+}
+.back_top{
+	display: none;
+	width: 54px;
+	height: 54px;
+	background: url(../img/backtop.png);
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+}
+
+/*page*/
+.pagebody{
+	background-color: #f1f1f1;
+}
+.cont_one,
+.cont_two,
+.cont_three{
+	border: 1px solid #ddd;
+	padding: 20px;
+	padding-bottom: 0;
+	margin-top:  20px;
+	background-color: #fff;
+}
+.cont_one_tit h3{
+	font-size: 16px;
+	color: #222;
+	font-weight: 700;
+	border-bottom: 1px solid #ddd;
+}
+.cont_one_cont{
+	position: relative;
+	overflow: hidden;
+	border-bottom: 1px dashed #ddd;
+	padding-left: 120px;
+}
+.cont_one_cont:last-child{
+	border-bottom: 0;
+}
+.cont_one_cont dt{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 80px;
+	margin-top: 10px;
+	font-size: 14px;
+	font-weight: 700;
+	text-align: center;
+	background-color: #eee;
+	border-radius: 3px;
+}
+.cont_one_cont dd{
+	overflow: hidden;
+	padding: 10px;
+}
+.cont_one_cont dd:hover{
+	background-color: #f1f1f1;
+}
+.cont_one_cont dd a:hover{
+	text-decoration: underline;
+}
+.cont_one_cont a{
+	float: left;
+	font-size: 14px;
+	margin-right: 20px;
+	line-height: 22px;
+	color: #444;
+}
