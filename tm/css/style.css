@@ -922,7 +922,7 @@ ul li{
 /*-----------shoping-----------*/
 .shopingBanner{
 	margin-top: 40px;
-	background-color: red;
+	overflow: hidden;
 }
 .shop_content{
 	width: 1230px;
@@ -1016,4 +1016,93 @@ ul li{
 	background-color: red;
 	text-decoration: none;
 	color: #fff;
+}
+/*----------channel_box------------*/
+.channel_box{
+	width: 1230px;
+	height: auto;
+	margin: 20px auto 0;
+	overflow: hidden;
+}
+.channel_type{
+	float: left;
+	width: 238px;
+	height: 476px;
+	margin-right: 10px;
+	background: #fff;
+}
+.channel_type.type05{
+	margin-right: 0;
+}
+
+.channel_type_title{
+	width: 100%;
+	height: 36px;
+	background-color: #dd2727;
+	color: #fff;
+	text-align: center;
+	line-height: 36px;
+	font-size: 18px;
+}
+.channel_iconfontr{
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+  color: #fff;
+ padding-top: 5px;
+}
+.channel_content{
+	padding-top: 10px;
+	background-color: #fff;
+	text-align: center;
+}
+.channel_cont_border{
+	width: 200px;
+	margin: 0 auto;
+	border-top: 1px solid #eee;
+}
+.channel_content a{
+	text-decoration: none;
+	color: #fff;
+	width: 238px;
+    height: 220px;
+    display: block;
+    overflow: hidden;
+}
+.channel_content h3{
+	font-size: 18px;
+	color: #000;
+}
+.channel_content p{
+	font-size: 12px;
+	color: #bbb;
+}
+.channel_cont{
+	position: relative;
+	display: block;
+	width: 140px;
+	height: 140px;
+	margin: 5px auto;
+}
+.channel_cont_bg{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	width: 140px;
+	height: 140px;
+	background-color: #000;
+	border-radius: 50%;
+	opacity: .03;
+}
+.channel_cont_img{
+	width: 130px;
+	height: 130px;
+}
+.channel_content a:hover .channel_cont_img{
+  transform: scale(1.1);  
+  transition: all .5s ease 0s;
 }
