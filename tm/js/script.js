@@ -26,11 +26,11 @@ $(function() {
 	}//function subnavShowHide()-end商品分类列表导航动态效果
 
 //-------------------------//
-	
 	var timer = null;
 	var i = 0;
 	move();
 	function move() {
+		
 		timer = setInterval(function() {
 			i++;
 			i%=5;
@@ -39,9 +39,9 @@ $(function() {
 		},2500);
 	}
 	$(".small_nav li").mouseenter(function() {
-		var i =$(this).index();
-		$(".banner_img li").eq(i).show().siblings().hide();
-		$(this).addClass('select').siblings().removeClass('select');
+			var i =$(this).index();
+			$(".banner_img li").eq(i).show().siblings().hide();
+			$(this).addClass('select').siblings().removeClass('select');			
 	});
 
 });
