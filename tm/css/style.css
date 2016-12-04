@@ -227,10 +227,11 @@ ul li{
 	text-decoration: underline;		
 }
 .sjzc_hover{
+	z-index: 33;
 	position: absolute;
-	top: 32px;
 	right: -1px;
 	display: none;
+	width: 122px;
 	padding: 5px;
 	border: 1px solid #e5e5e5;
 	border-top: none;
@@ -246,23 +247,21 @@ ul li{
 	color: #666;
 }
 .sjzc_hover ul{
-	width: 1230px;
+	width: 122px;
 	overflow: hidden;
 }
 .sjzc_hover li{
-	overflow: hidden;
 	float: none;
-	height: auto;
 	border: none;
 	padding: 0;
 	line-height: 20px;
-	margin-right: -25px;
+	margin-right: -22px;
 	border-bottom: 1px dotted #827777;
 	
 }
 .sjzc_hover li a{
-	float: left;
 	display: inline-block;
+	width: 48px;
 	color: #666;
 	line-height: 22px;
 	margin-right: 22px;
@@ -1241,4 +1240,4 @@ ul li{
 .content_list.item2 .clcr_c_tit1{
 	color: #19C8A9;
 }
-/*----------.content_list.item3----------*/
+/*----------.content_list.item3------*/
