@@ -60,7 +60,7 @@ body{
 	box-shadow: 1px 1px 1px #eee;
 }
 .img_cont:hover{
-	box-shadow: 3px 3px 8px #ccc;
+	box-shadow: 0 0 15px #ccc;
 }
 .img_cont img{
 	max-width: 550px;
