@@ -102,11 +102,14 @@ body{
 	margin-top:  20px;
 	background-color: #fff;
 }
+.cont_one_tit{
+
+	border-bottom: 1px solid #ddd;
+}
 .cont_one_tit h3{
 	font-size: 16px;
 	color: #222;
 	font-weight: 700;
-	border-bottom: 1px solid #ddd;
 }
 .cont_one_cont{
 	position: relative;
