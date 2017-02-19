@@ -1,0 +1,110 @@
+@charset "utf-8";
+*{margin: 0; padding: 0; border: 0;text-decoration:none;font-size:14px; font-family: "lucida Grande",Verdana,"microsoft YaHei","微软雅黑"}
+ul li{
+	list-style: none;
+}
+body{
+	/*background: url(../img/bgimg.png);*/
+	background-color: #fff;
+}
+.main{
+	min-height: 500px;
+}
+.header{
+	height: 62px;
+	border-bottom: 1px solid #d6dfea;
+	background: #eff4fa;
+}
+.header_logo{
+	float: left;
+	width: 182px;
+    height: 35px;
+    margin-left: 40px;
+    margin-top: 14px;
+    background: url(../img/qqmail_logo.png) no-repeat;
+}
+.header_link{
+	float: right;
+	line-height: 62px;
+	margin-right: 40px;
+	color: #b6b6b6;
+}
+.header_link a{
+	font-size: 12px;
+	color: #1d5494;
+	text-decoration: none;
+}
+.header_link a:hover{
+	text-decoration: underline;
+}
+.content{
+	width: 960px;
+    margin: 32px auto;
+    padding: 0 24px;
+}
+.cont{
+	position: relative;
+	min-height: 372px;
+    padding-top: 40px;
+}
+/*--------------login-------------*/
+.login{
+	float: right;
+	width: 334px;
+	
+}
+.login_header{
+	height: 51px;
+	border: 1px solid #a0b1c4;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom: 1px solid #a0b1c4;
+	background-color: #f9fbfe;
+}
+.login_header a{
+	line-height: 51px;
+	color: #999;
+	margin-left: 55px;
+	font-size: 16px;
+}
+.login_header a:hover{
+	color: #333;
+}
+.login_h.select{
+	color: #333;
+}
+.login_cont{
+	height: 200px;
+}
+/*------------login_pictures-------------*/
+.login_pictures{
+	position: relative;
+	float: right;
+	width: 520px;
+	height: 400px;
+	margin-right: 20px;
+}
+/*----------login_pictures_text-----------*/
+.login_pictures_txt{
+	position: relative;
+	margin-top: 51px;
+}
+
+.login_pictures_title{
+	margin-bottom: 20px;
+	font-size: 25px;
+	line-height: 27px;
+	color: #6f95c8;
+}
+.login_pictures_txt p{
+	line-height: 24px;
+}
+
+/*------------------cont_bg--------------------*/
+.cont_bg{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 300px;
+	height: 300px;
+}
