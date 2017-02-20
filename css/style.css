@@ -9,7 +9,7 @@ body{
 }
 
 .main{
-	overflow: auto;
+	min-width: 1200px;
 }
 .nav{
 	min-height: 400px;

@@ -53,6 +53,7 @@ ul li{
 }
 /*logoBar;*/
 .logoBar{
+	min-width: 1000px;
 	height: 85px;
 	background-color: #1d7ad9;
 }
@@ -114,6 +115,7 @@ ul li{
 }
 /*导航*/
 .navBox{
+	min-width: 1000px
 	height: 35px;
 	background: #1369c0;
 	color: #fff;
@@ -440,6 +442,7 @@ ul li{
 }
 /*footer*/
 .footer{
+	min-width: 1000px;
 	text-align: center;
 	margin-top: 45px;
 	background: #d4d4d4;

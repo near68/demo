@@ -34,6 +34,10 @@ ul li{
   -moz-osx-font-smoothing: grayscale;
   color: #c40000;
 }
+/*wrap*/
+.wrap{
+	min-width: 1230px;
+}
 .top_ad{
 	width: 100%;
 	height: 80px;
