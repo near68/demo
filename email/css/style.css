@@ -7,7 +7,7 @@ body{
 	/*background: url(../img/bgimg.png);*/
 	background-color: #fff;
 }
-.main{
+.wrap{
 	min-width: 1080px;
 	min-height: 500px;
 }
@@ -74,8 +74,48 @@ body{
 .login_h.select{
 	color: #333;
 }
-.login_cont{
-	height: 200px;
+.login_tip{
+	height: 40px;
+	width: auto;
+	border-width: 0 1px;
+	border-style: solid;
+	border-color: #a0b1c4;
+}
+.error_tip{
+	height: auto;
+	text-align: center;
+}
+.error_message{
+	text-align: center;
+	color: red;
+	line-height: 40px;
+}
+.login_from{
+	width: auto;
+	border-width: 0 1px;
+	border-style: solid;
+	border-color: #a0b1c4;
+}
+#user,#psw{
+	width: 232px;
+	height: 30px;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+	padding: 5px 35px 5px 8px;
+	margin: 0 0 15px 25px;
+}
+#sub{
+	width: 278px;
+	height: 40px;
+	background-color: #5a98de;
+	font-weight: normal;
+	font-size: 18px;
+	display: block;
+	border: 1px solid #5a98de;
+	border-radius: 2px;
+	margin: 40px 0 0 25px;
+	color: #fff;
+	cursor: pointer;
 }
 /*------------login_pictures-------------*/
 .login_pictures{

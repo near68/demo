@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<div class="main">
+	<div class="wrap">
 		<div class="header">
 			<div class="logo">
 				<a class="header_logo" href="https://mail.qq.com/"></a>
@@ -26,10 +26,14 @@
 						<a class="login_h select"href="#">账号密码登录</a>
 					</div>
 					<div class="login_tip">
-						
+						<div class="error_tip" style="display: block;">
+							<span class="error_message"></span>
+						</div>
 					</div>
-					<div class="login_cont">
-						
+					<div class="login_from">
+						<input type="text" name="username" id="user" placeholder="支持QQ号/邮箱/手机号登录">
+						<input type="password" name="password" id="psw" placeholder="登录密码">
+						<input type="submit" value="登 录" id="sub">
 					</div>
 				</div><!-- login_header-end -->
 				<div class="login_pictures">
@@ -45,29 +49,6 @@
 						<p>现在，您也可以在邮件里</p>
 						<p>用:-)来传达一个微笑的表情，</p>
 					</div>
-					<script language="JavaScript">
-<!-- Hide
-var a = Math.random() + ""			//产生一个随机数
-var rand1 = a.charAt(5)				//的到这个数的第五个字符(实际还是从0~9的数字)
-quotes = new Array				//创建消息数组
-quotes[1] = '欢迎光临'				//这里分配十句随机出现的文本
-quotes[2] = '请注意本信息'
-quotes[3] = '感谢你使用本书'
-quotes[4] = 'javascript，不错的特效语言'
-quotes[5] = 'javascript不是java'
-quotes[6] = '本特效可以用于写欢迎词'
-quotes[7] = '每次进入，这里的信息都可以刷新'
-quotes[8] = '我爱javascript'
-quotes[9] = 'javascript，美丽的语言'
-quotes[0] = 'javascript简单，方便'
-var quote = quotes[rand1]	//由随机数选择一句话
-//-->
-</script>
-<script language="JavaScript">
-<!-- Hide
-document.write( quote )		//将上面选择的话写进页面
-// -->
-</script>
 				<!-- <div class="login_pictures_txt">
 						<p class="login_pictures_title">QQ邮箱，常联系！</p>
 						<p>到头来，</p>
@@ -86,7 +67,7 @@ document.write( quote )		//将上面选择的话写进页面
 				</div><!-- login_pictures-end -->
 			</div><!-- cont-end -->
 		</div><!-- content-end -->
-	</div><!--main-end-->
+	</div><!--wrap-end-->
 <script src="../js/jquery.1.9.1.min.js"></script>
 <script src="js/script.js"></script>
 </html>
