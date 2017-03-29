@@ -29,19 +29,24 @@ $(function() {
 	var timer = null;
 	var i = 0;
 	move();
-	function move() {
-		
-		timer = setInterval(function() {
+	function move(){
+		clearInterval(timer);
+		timer = setInterval(function(){
 			i++;
 			i%=5;
 			$(".small_nav li").eq(i).addClass('select').siblings().removeClass('select');
 			$(".banner_img li").eq(i).show().siblings().hide();
-		},2500);
-	}
-	$(".small_nav li").mouseenter(function() {
-			var i =$(this).index();
+			},3000);
+		$(".small_nav li").mouseenter(function(){
+			i =$(this).index();
 			$(".banner_img li").eq(i).show().siblings().hide();
 			$(this).addClass('select').siblings().removeClass('select');			
-	});
+		});
+	}
+	$(".banner_img").hover(function() {
+		clearInterval(timer);
+		},function(){
+			move();
+		});
 
 });

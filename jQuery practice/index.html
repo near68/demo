@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="jquery,practice,word">
+	<meta name="description" content="这是一个jQuery的练习，来自锋利的JQ(第二版)">
+	<title>jQuery practice</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+<!-- 	<script src="js/jquery.1.9.1.min.js"></script> -->
+	<script src="js/script.js"></script>
+</head>
+<body>
+	<div id="header">
+		<div class="contWidth">
+			<a href="#nogo" class="logo"><img src="img/logo.gif" alt="Jane Shop"></a>
+			<div class="search">
+				<input type="text" id="inputSearch" class="" value="输入商品名称" />
+			</div>
+			<ul id="skin" class="fr">
+				<li id="skin_0" title="蓝色" class="selected">蓝色</li>
+				<li id="skin_1" title="紫色">紫色</li>
+				<li id="skin_2" title="红色">红色</li>
+				<li id="skin_3" title="天蓝色">天蓝色</li>
+				<li id="skin_4" title="橙色">橙色</li>
+				<li id="skin_5" title="淡绿色">淡绿色</li>
+			</ul>
+			<!-- 导航 start-->
+			<div id="nav" class="mainNav">
+				<ul class="nav">
+					 <li><a href="#">首 页</a></li>
+					 <li><a href="#">品 牌</a>
+						<div class="jnNav">
+							<div class="subitem">
+								<dl class="fore">
+									<dt>
+										<a href="#nogo">品牌：</a>
+									</dt>
+									<dd>
+										<em ><a href="#nogo">耐克</a></em>
+										<em ><a href="#nogo">阿迪达斯</a></em>
+										<em ><a href="#nogo">达芙妮</a></em>
+										<em ><a href="#nogo">李宁</a></em>
+										<em ><a href="#nogo">安踏</a></em>
+										<em ><a href="#nogo">奥康</a></em>
+										<em ><a href="#nogo">骆驼</a></em>
+										<em ><a href="#nogo">特步</a></em>
+										<em ><a href="#nogo">耐克</a></em>
+										<em ><a href="#nogo">阿迪达斯</a></em>
+										<em ><a href="#nogo">达芙妮</a></em>
+										<em ><a href="#nogo">李宁</a></em>
+										<em class="noborder"><a href="#nogo">特步</a></em>
+									</dd>
+								</dl>
+								<dl>
+									<dt>
+										<a href="#nogo">品牌：</a>
+									</dt>
+									<dd>
+										<em ><a href="#nogo">耐克</a></em>
+										<em ><a href="#nogo">阿迪达斯</a></em>
+										<em ><a href="#nogo">达芙妮</a></em>
+										<em ><a href="#nogo">李宁</a></em>
+										<em ><a href="#nogo">安踏</a></em>
+										<em ><a href="#nogo">奥康</a></em>
+										<em ><a href="#nogo">骆驼</a></em>
+										<em ><a href="#nogo">特步</a></em>
+										<em ><a href="#nogo">耐克</a></em>
+										<em ><a href="#nogo">阿迪达斯</a></em>
+										<em ><a href="#nogo">达芙妮</a></em>
+										<em ><a href="#nogo">李宁</a></em>
+										<em class="noborder"><a href="#nogo">特步</a></em>
+									</dd>
+								</dl>
+							</div>
+						</div>
+					</li>
+					<li><a href="#">女 装</a>
+						<div class="jnNav">
+							<div class="subitem">
+								<dl class="fore">
+									<dt>
+										<a href="#nogo">女 装：</a>
+									</dt>
+									<dd>
+										<em ><a href="#nogo">耐克</a></em>
+										<em ><a href="#nogo">阿迪达斯</a></em>
+										<em ><a href="#nogo">达芙妮</a></em>
+										<em ><a href="#nogo">李宁</a></em>
+										<em ><a href="#nogo">安踏</a></em>
+										<em ><a href="#nogo">奥康</a></em>
+										<em ><a href="#nogo">骆驼</a></em>
+										<em ><a href="#nogo">特步</a></em>
+										<em ><a href="#nogo">耐克</a></em>
+										<em ><a href="#nogo">阿迪达斯</a></em>
+										<em ><a href="#nogo">达芙妮</a></em>
+										<em ><a href="#nogo">李宁</a></em>
+										<em class="noborder"><a href="#nogo">特步</a></em>
+									</dd>
+								</dl>
+								<dl>
+									<dt>
+										<a href="#nogo">女 装：</a>
+									</dt>
+									<dd>
+										<em ><a href="#nogo">耐克</a></em>
+										<em ><a href="#nogo">阿迪达斯</a></em>
+										<em ><a href="#nogo">达芙妮</a></em>
+										<em ><a href="#nogo">李宁</a></em>
+										<em ><a href="#nogo">安踏</a></em>
+										<em ><a href="#nogo">奥康</a></em>
+										<em ><a href="#nogo">骆驼</a></em>
+										<em ><a href="#nogo">特步</a></em>
+										<em ><a href="#nogo">耐克</a></em>
+										<em ><a href="#nogo">阿迪达斯</a></em>
+										<em ><a href="#nogo">达芙妮</a></em>
+										<em ><a href="#nogo">李宁</a></em>
+										<em class="noborder"><a href="#nogo">特步</a></em>
+									</dd>
+								</dl>
+							</div>
+						</div>
+					</li>
+					<li><a href="#">男 装</a>
+						<div class="jnNav">
+							<div class="subitem">
+								<dl class="fore">
+									<dt>
+										<a href="#nogo">男 装：</a>
+									</dt>
+									<dd>
+										<em ><a href="#nogo">耐克</a></em>
+										<em ><a href="#nogo">阿迪达斯</a></em>
+										<em ><a href="#nogo">达芙妮</a></em>
+										<em ><a href="#nogo">李宁</a></em>
+										<em ><a href="#nogo">安踏</a></em>
+										<em ><a href="#nogo">奥康</a></em>
+										<em ><a href="#nogo">骆驼</a></em>
+										<em ><a href="#nogo">特步</a></em>
+										<em ><a href="#nogo">耐克</a></em>
+										<em ><a href="#nogo">阿迪达斯</a></em>
+										<em ><a href="#nogo">达芙妮</a></em>
+										<em ><a href="#nogo">李宁</a></em>
+										<em class="noborder"><a href="#nogo">特步</a></em>
+									</dd>
+								</dl>
+								<dl>
+									<dt>
+										<a href="#nogo">男 装：</a>
+									</dt>
+									<dd>
+										<em ><a href="#nogo">耐克</a></em>
+										<em ><a href="#nogo">阿迪达斯</a></em>
+										<em ><a href="#nogo">达芙妮</a></em>
+										<em ><a href="#nogo">李宁</a></em>
+										<em ><a href="#nogo">安踏</a></em>
+										<em ><a href="#nogo">奥康</a></em>
+										<em ><a href="#nogo">骆驼</a></em>
+										<em ><a href="#nogo">特步</a></em>
+										<em ><a href="#nogo">耐克</a></em>
+										<em ><a href="#nogo">阿迪达斯</a></em>
+										<em ><a href="#nogo">达芙妮</a></em>
+										<em ><a href="#nogo">李宁</a></em>
+										<em class="noborder"><a href="#nogo">特步</a></em>
+									</dd>
+								</dl>
+							</div>
+						</div>
+					 </li>
+					 <li><a href="#">鞋包配饰</a></li>
+				</ul>
+			</div><!-- nav end -->
+		</div><!-- contwidth end-->
+	</div><!-- header-end -->
+	<div id="content">
+		
+	</div>
+	<div id="footer"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+</body>
+</html>

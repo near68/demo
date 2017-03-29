@@ -1,16 +1,16 @@
 $(document).ready(function() {
 
-	var timer = null,
-	 	i = 0;
+	var timer = null;
+	var	i = 0;
 	move();
 	function move(){
-		timer = setInterval(function() {
+		timer = setInterval(function(){
 			i++;
 			i%=3;
 			$(".ad>dl>dd").eq(i).addClass('active').siblings().removeClass('active');
 			$(".ad_pic>li").eq(i).fadeIn(2000).siblings().fadeOut();
 			$(".l_tit div").eq(i).show().siblings().hide();
-			},2500);
+			},3000);
 	}//move-end
 
 		$(".ad").hover(function() {
@@ -21,19 +21,19 @@ $(document).ready(function() {
 			$(".prev_pic,.next_pic").hide();
 			});
 		$(".prev_pic").click(function() {
-				var i = $(".ad_pic li:visible").index()-1;
+				i = $(".ad_pic li:visible").index()-1;
 				$(".ad_pic li").eq(i).fadeIn().siblings().fadeOut();
 				$(".ad>dl>dd").eq(i).addClass('active').siblings().removeClass('active');
 			});
 		$(".next_pic").click(function() {
-				var i = $(".ad_pic li:visible").index()+1;
+				i = $(".ad_pic li:visible").index()+1;
 				i%=3;
 				$(".ad_pic li").eq(i).fadeIn().siblings().fadeOut();
 				$(".ad>dl>dd").eq(i).addClass('active').siblings().removeClass('active');
 			});
 		// 移入AD清除计时器和，移出AD运行move。
 		$(".ad>dl>dd").mouseenter(function() {//点击小圆点，运行函数
-			var i = $(this).index();//获取点击（this）的元素序列赋给i
+			i = $(this).index();//获取点击（this）的元素序列赋给i
 			$(".ad_pic li").eq(i).fadeIn().siblings().fadeOut();
 			//li（图片）对应index值的li淡入，其他淡出。
 			$(this).addClass('active').siblings().removeClass('active');
@@ -76,7 +76,7 @@ $(document).ready(function() {
 		}).mouseleave(function() {
 			n_spec.hide();
 		});  //li_nav_spec-end
-	 }; //navhover-end
+	 };//navhover-end
 
 	 $(window).scroll(function() {
 	 	var wscr = $(window).scrollTop();

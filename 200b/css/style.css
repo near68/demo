@@ -15,7 +15,6 @@ body{font:12px/1.5 Arial,"Hiragino Sans GB W6","Microsoft YaHei","微软雅黑",
 	margin: 0 auto;
 	line-height: 50px;
 	font-size: 14px;
-	
 }
 .weixin i{
 	display: none;
@@ -182,7 +181,7 @@ body{font:12px/1.5 Arial,"Hiragino Sans GB W6","Microsoft YaHei","微软雅黑",
 	overflow: hidden;
 }
 /*内容左侧*/
-.cont_left{
+.cont_box{
 	position: relative;
 	float: left;
 	width: 680px;
@@ -310,7 +309,7 @@ body{font:12px/1.5 Arial,"Hiragino Sans GB W6","Microsoft YaHei","微软雅黑",
 	color: #000;
 }
 /*左侧列表内容*/
-.left_list{
+.cont_list{
 	width: 680px;	
 }
 .list_cont_item{
@@ -327,10 +326,10 @@ body{font:12px/1.5 Arial,"Hiragino Sans GB W6","Microsoft YaHei","微软雅黑",
 .list_l img{
 	width: 100%;
 	height: 100%;
+	transition: all 1s ease 0s;
 }
 .list_l img:hover{
-  transform: scale(1.1);  
-  transition: all 1s ease 0s;
+  transform: scale(1.1);
 }
 .list_l a{
 	display: block;
@@ -408,9 +407,11 @@ body{font:12px/1.5 Arial,"Hiragino Sans GB W6","Microsoft YaHei","微软雅黑",
 	margin-bottom: 35px;
 
 }
-.list_pic img:hover{
-	transform: scale(1.1);  
+.list_pic img{
 	transition: all 1s ease 0s; 
+}
+.list_pic img:hover{
+	transform: scale(1.1); 
 }
 .list_pic .list_pic_a{
 	display: block;

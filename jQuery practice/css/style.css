@@ -1,0 +1,41 @@
+@charset "utf-8";
+#header{ background: #e9e9e9; height: 105px;}
+#header .contWidth{ position: relative; z-index: 100; height: 105px; width: 990px; margin: 0 auto;}
+#header .logo {margin-left: 10px; color: #fff; line-height: 80px;}
+#header .search{ position: absolute; left: 198px; top: 20px;}
+#inputSearch{ border: 1px solid #BABEBF; color: #999999; font-size: 14px; height: 17px; padding: 3px 6px 5px 6px; width: 200px;}
+#inputSearch.focus{ border: 1px solid #00A5FF; }
+#skin{ width: 120px; padding: 4px; margin: 10px;}
+#skin li { overflow: hidden; float: left; display: block; width: 15px ; height: 15px; margin-right: 4px; cursor:pointer; text-indent: -999px; background-image: url("../img/theme.gif");}
+#skin_0 { background-position: 0px 0px; }
+#skin_1 { background-position: 15px 0px; }
+#skin_2 { background-position: 35px 0px; }
+#skin_3 { background-position: 55px 0px; }
+#skin_4 { background-position: 75px 0px; }
+#skin_5 { background-position: 95px 0px; }
+#skin_0.selected { background-position: 0px 15px; }
+#skin_1.selected { background-position: 15px 15px; }
+#skin_2.selected { background-position: 35px 15px; }
+#skin_3.selected { background-position: 55px 15px; }
+#skin_4.selected { background-position: 75px 15px; }
+#skin_5.selected { background-position: 95px 15px; }
+/*导航样式开始*/
+.mainNav {position: absolute; top: 68px; left: 0; height: 37px; line-height: 37px; width: 990px; z-index:100; background-color: #555;}
+.mainNav .nav{float: left; display: inline; margin-left: 25px;}
+.mainNav .nav li{position: relative; z-index: 1000; float: left; margin-right: 15px;}
+.mainNav .nav li a{display: block; color: #fff; font-size: 14px; font-weight: 700; padding: 0 8px;}
+/*二级菜单*/
+.jnNav{position: absolute; left: 0;  z-index: 1000; display: none; width: 474px; background: #fff; border: 1px solid #ccc; border-top: 0; overflow: hidden;}
+.jnNav .subitem { float: left; height: auto !important; min-height: 100px; padding: 10px 12px; width: 450px;}
+.jnNav .subitem dl { border-top: 1px dashed #C4C4C4; overflow: hidden; padding: 8px 0; float:left;}
+.jnNav .subitem .fore {border-top-style: none; padding-top: 0;}
+.jnNav .subitem dt { float: left; font-weight: bold; line-height: 16px; padding: 4px 3px; text-align: center; width: 76px;}
+.jnNav .subitem dt a { color: #000; font-weight: 700; font-size:12px; padding:0; }
+.jnNav .subitem dd { float: left; overflow: hidden; padding: 0; width: 364px;}
+.jnNav .subitem em { border-right: 1px solid #CCCCCC; float: left; font-style: normal; height: 14px; line-height: 14px; margin: 5px 0; padding: 0 8px;}
+.jnNav .subitem em a {color: #666666; /* white-space: nowrap;*/ font-size:12px; font-weight:normal;  padding:0; }
+.jnNav .subitem em.noborder { border-right: 0 none; }
+
+
+
+
