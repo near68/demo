@@ -28,6 +28,16 @@
   -moz-osx-font-smoothing: grayscale;
 
 }
+.back_top_s .iconfont{
+  line-height: 60px;
+  color: #666;;
+  font-family:"iconfont" !important;
+  font-size:40px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
 
 /*首先链接字体位置要正确，并且把下载下来的字体文件拷贝到相对于的CSS文件夹下*/
 
