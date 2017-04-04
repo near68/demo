@@ -1,4 +1,21 @@
 @charset 'utf-8';
+/*公共样式*/
+/*---------img animastion-----------------------*/
+.big_img.class_img img{width: 225px; height: 466px; transition: all 1s ease 0s}
+.big_img.class_img.w img{width: 470px; height: 184px; transition: all 1s ease 0s}
+.big_img.class_img.h img{width: 225px; height: 390px; transition: all 1s ease 0s}
+.course_sidebar_img.class_img img{width: 225px; height: 324px;}
+.course_sidebar_img.mini.class_img img{width: 225px; height: 248px;}
+.class_img img{width: 225px; height: 142px; transition: all 1s ease 0s}
+.class_img img:hover{transform: scale(1.15);}
+/*---------ico图片，左上角图片----------------------*/
+.new_ico{position: absolute; left: -2px; top: -2px; z-index: 111; width: 51px; height: 51px; 
+	background: url(../img/onlu.png) no-repeat -64px -80px;}
+.the_first_ico{position: absolute; left: -2px; top: -2px; z-index: 112; width: 51px; height: 51px; 
+	background: url(../img/onlu.png) no-repeat 1px -80px;}
+.mini_teacher{position: absolute; right: 0; top: 122px; background: rgba(1,1,1,.6);
+	color: #fff; padding: 1px 4px;;}
+/*end*/
 .header_box{width: 1205px; margin: 0 auto;}
 .logo{float: left;width: 500px; height: 100px; margin-left:-60px;
 	background: url(../img/logo.png) no-repeat;}
@@ -58,7 +75,6 @@
 /*.banner_content a{display: block;}*/
 .banner_img img{ vertical-align:middle; width: 1205px; height: 400px;}
 .banner_sidebar{position: absolute; right: 0; top: 30px; z-index: 3; width: 225px;}
-.sidebar_img {font-size: ;}
 .sidebar_img img{vertical-align:middle; width: 225px; height: 120px;}
 .sidebar_c {padding: 8px 20px; background: #fff;}
 .sidebar_c a{display: block; width: 180px; text-align: left; line-height: 30px;
@@ -75,7 +91,7 @@
 .s_f_live span{background-position: -8px -36px;}	    
 .s_f_subject span{ background-position: -40px -34px;}
 /*content_box_first*/
-.content_box_first{width: 100%; height: 1000px; background: #f8f8f8;}
+.content_box_first{width: 100%; background: #f8f8f8;}
 .micor_box{width: 1203px; padding: 25px 0; margin: 0 auto 25px;  overflow: hidden;
 	border: 1px solid #ccc; border-top: 0;background: #fff;}
 .micor_list{margin-left: -2px; width: 2500px;}
@@ -91,14 +107,12 @@
 .class_item a{color: #000;font-size: 14px;line-height: 1.7;}
 .class_item a:hover{color: #31a030; text-decoration: none;}
 .class_img{width: 225px; height: 142px; overflow: hidden;}
-/*---------img animastion-----------------------*/
-.class_img img{transition: all 1s ease 0s}
-.class_img img:hover{transform: scale(1.15);}
-/*---------img animastion----------------------*/
+
 .free_course_title{line-height: inherit;}
 .free_course_subtitle{font-size: 12px; color: #bbb;}
-/*selling_course畅销好课*/
-.selling_course{width: 1205px; margin: 0 auto 30px;}
+/*-------selling_course畅销好课.office_effic,.p_and_design...----------------*/
+.selling_course,.office_effic,.p_and_design,.language{width: 1205px; margin: 0 auto;}
+.selling_course{margin-bottom: 40px;}
 .course_title{height: 24px; padding-bottom: 10px;}
 .course_title h2{color: #000; font-size: 24px; font-weight: normal; line-height: 1;}
 .course_title a{color: inherit; text-decoration: none; font-size: 12px; 
@@ -113,27 +127,60 @@
 /*--------------course_box-------------*/
 .course_cont{width: 980px;}
 .course_cont .big_img{width: 225px; height: 466px; overflow: hidden;}
-.selling_img_box a{display: inline-block;float: left; }
-.course_item{width: 225px; height: 223px; margin: 0 0 30px 20px;}
-
-.course_sierbar{width: 225px; height: 466px;}
-.course_sierbar_tit{height: 102px; padding: 20px; background: #d486e7;}
-.course_sierbar_tit a{display: block; width: 185px; font-size: 14px; line-height: 26px; 
+.selling_img_box a{display: inline-block;float: left; text-decoration: none;}
+.selling_img_box a:hover h3{color: #31a030;}
+.course_item{position: relative;  width: 225px; height: 223px; margin: 0 0 20px 20px;}
+.course_item .title{line-height: 1.6;padding-top: 4px;}
+.course_item .title h3{font-weight: normal; color: #333; font-size: 14px; 
+	overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.course_item .title span{color: #bbb;}
+.course_item .money{font-size: 24px; color: red; line-height: 1.2; margin-left: -5px;}
+.course_item .money span{font-size: 14px; color: #bbb; text-decoration: line-through;}
+.course_siedrbar{width: 225px; height: 466px;}
+.course_siedrbar_tit{height: 102px; padding: 20px; background: #d486e7;}
+.course_siedrbar_tit a{display: block; width: 185px; font-size: 14px; line-height: 26px; 
 	color: #fff; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
 .course_sidebar_img {width: 225px; height: 324px;}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*---------great_teacher--------*/
+.great_teacher{width: 1205px; margin: 0 auto;}
+.great_teacher_box{ list-style: none;}
+.great_teacher_box li{float: left; margin-left: 1px;}
+.great_teacher_box li a{position: relative; float: left; color: #fff; font-size: 20px;}
+.great_teacher_box li a:hover{color: #31a030;}
+.great_teacher_box li a img{vertical-align: middle; width: 240px; height: 240px;}
+.great_teacher_box li a h3{position: absolute; top:200px; left: 0;
+	font-weight: normal; padding: 5px;}
+.great_teacher_box li a .title{font-size: 14px;}
+.jigou{display: block; width: 220px; height: 220px; padding: 10px; background: #4d94dd}
+.jigou li{display: block;  width: 204px; line-height: 2.7; padding-left: 5px;}
+.jigou li a{ color: #fff; font-size: 14px; width: 130px; overflow: hidden; text-overflow: ellipsis;
+    white-space: nowrap;}
+.jigou li a:hover{text-decoration: underline; color: #fff;}
+.jigou li span{color: #fff; font-size: 14px; float: right;}
+.margin_box{height: 50px;}
+/*---------content_box_second---办公效率---------------*/
+.big_img.mini.w{width: 470px; height: 184px; margin-right: 20px;}
+.big_img.mini.h{width: 225px; height: 390px; margin-right: 20px;}
+.course_img_box a{display: inline-block;float: left; text-decoration: none;}
+.course_img_box a:hover h3{color: #31a030;}
+.course_item.mini{position: relative;  width: 225px; height: 185px; margin: 0 20px 20px 0}
+/*---------------.course_siedrbar.mini---------------*/
+.course_siedrbar.mini{width: 225px; height: 390px;}
+.course_sidebar_img.mini{width: 225px; height: 248px;}
+.course_siedrbar_tit.first{background: #4bbc93;}
+.course_siedrbar_tit.second{background: #e19932;}
+.course_siedrbar_tit.third{height: 102px; padding: 20px; background: #d486e7;}
+.course_siedrbar_tit.fourth{height: 102px; padding: 20px; background: #eb7b7c;}
+/*-----------------footer--------------*/
+#footer{width: 100%; background: #474443;}
+.footer_box{width: 1205px; margin: 0 auto;}
+.footer_cont{width: 430px; padding: 50px 0 30px;}
+.footer_logo{width: 258px; height: 46px; float: left; background: url(../img/logoFoot.png) no-repeat;}
+.footer_logo_text{float: left; margin: 20px 0; line-height: 24px; color: #ddd;}
+.about{float: left; color: #fff;width: 400px;}
+.about p{float: left;}
+.about a{display: block; float: left; width: 20px; height: 20px;margin: 3px 0 0 4px;}
+.about .weibo{background: url(../img/about_ico.png) no-repeat; background-position: -34px -52px;}
+.about .renren{background: url(../img/about_ico.png) no-repeat; background-position: -34px -72px;}
+.about .weixin{background: url(../img/about_ico.png) no-repeat; background-position: -7px -52px;}
+.footer_cont span{float: left; color: #bbb;}
