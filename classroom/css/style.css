@@ -9,9 +9,11 @@
 .class_img img{width: 225px; height: 142px; transition: all 1s ease 0s}
 .class_img img:hover{transform: scale(1.15);}
 /*---------ico图片，左上角图片----------------------*/
-.new_ico{position: absolute; left: -2px; top: -2px; z-index: 111; width: 51px; height: 51px; 
+.new_ico{position: absolute; left: -2px; top: -2px; z-index: 111; width: 51px;
+	height: 51px; 
 	background: url(../img/onlu.png) no-repeat -64px -80px;}
-.the_first_ico{position: absolute; left: -2px; top: -2px; z-index: 112; width: 51px; height: 51px; 
+.the_first_ico{position: absolute; left: -2px; top: -2px; z-index: 112; width: 51px;
+	height: 51px; 
 	background: url(../img/onlu.png) no-repeat 1px -80px;}
 .mini_teacher{position: absolute; right: 0; top: 122px; background: rgba(1,1,1,.6);
 	color: #fff; padding: 1px 4px;;}
@@ -36,18 +38,19 @@
 	filter:alpha(opacity=70); opacity: .7; }
 .subul {height: 400px; width: 224px;overflow: hidden;}
 .subnav ul li {z-index: 3; height: 67px; padding: 0 10px; position: relative;}
-.li_bg{position: absolute; width: 100%; height: 65px; margin-left: -10px;}
-.subnav ul li p{position: absolute; width: 200px; height: 66px ;text-align: left;
+.subul .active i{position: absolute; width: 100%; height: 64px; margin-left: -10px;}
+.subul li p{position: absolute; width: 200px; height: 66px ;text-align: left;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.2);}
-.subnav ul li:hover p{border-bottom:0;}
+.subnav .active p{border-bottom:0;}
 .last_p{position: absolute; width: 200px; height: 66px ;text-align: left;
 	border-bottom: 0;}
-.subnav ul li:hover .li_bg{background: #fff;}
+.subnav .active{background: #fff;color: #000;}
 .subnav_a_sec,.subnav_a_fir{display: inline-block; margin-left: 8px; color: #fff;
 	line-height: 62px; font-size: 12px; opacity: .8; filter:alpha(opacity=80);}
 .subnav_a_fir{font-size: 16px; opacity: 1; filter:alpha(opacity=100);}
-.subnav ul li:hover .subnav_a_fir{color: #000;}
-.subnav ul li:hover .subnav_a_sec{color: #000;}
+.subul .active .subnav_a_fir{color: #000;}
+.subul .active .subnav_a_sec{color: #000;}
+
 .nav_m{padding-left: 250px;}
 .nav_m a{float: left; padding: 0 16px; line-height: 52px; font-size: 16px;
 	text-align: center; color: #000;}
@@ -62,10 +65,34 @@
 .search_type i{position: absolute; top: 14px; right: 0; width: 0; height: 0;
 	border: 10px solid transparent; border-width: 4px; border-top-color: #000;}
 .search_type:hover i{border-top-color: #31a030;}
-#search_input{ width: 250px; padding-left: 12px; outline: none; border: 0;
-	line-height: 34px;}
+#search_input{ width: 230px; height: 33px; padding: 0 12px; outline: none; border: 0;
+	line-height: 33px;}
 .search_submit{position: absolute; top: 0; right: 0; width: 34px; height: 34px;
 	background-image: url(../img/searchsubmit.png); cursor: pointer;}
+/*----------------subnav_child导航展开页-----------------*/
+.subnav_child{display: none;position: absolute; top: 52px; left: 224px; width: 918px; 
+	height: 361px; padding: 23px 22px 15px 40px; border: 1px solid #ccc; 
+	border-bottom: 0; border-left: 0; background: #fff;}
+.subnav_child.active{display:block;}
+.subnav_child_cont{width: 680px; }
+.subnav_child_sidebar{width: 200px;}
+.subnav_child_tit{width: 100%;}
+.subnav_child_tit a{display: inline-block; padding: 6px 12px; border: 1px solid #ffa338; 
+	margin-right: 20px; text-decoration: none; color: #ffa338;border-radius: 2px;}
+.subnav_child_tit a:hover{background: #ffa338; color: #fff;}
+.subnav_child_list{width: 100%; padding-top: 15px;}
+.subnav_child_list dl{margin-top: 10px;}
+.subnav_child_list dt a{display: inline-block; font-size: 14px; line-height: 30px;
+	color: #333;}
+.subnav_child_list dd{margin-left: 90px; margin-top: -30px;}
+.subnav_child_list dd a{display: inline-block; padding: 0 15px; margin: 8px 0;
+	border-left: 1px solid #ccc; font-size: 14px; line-height: 14px; color: #666;}
+.subnav_child_list dd .hot{color: #31a030;}
+/*----------subnav_child_sidebar----------------------------*/
+.subnav_child_sidebar{width: 200px;}
+.s_c_s_list .title{font-size: 16px;}
+.s_c_s_list a{ display: inline-block; overflow: hidden; text-overflow: ellipsis; 
+	white-space: nowrap; line-height: 26px; font-size: 12px; color: #666;}
 /*内容*/
 #content{}
 /*banner*/
@@ -92,13 +119,19 @@
 .s_f_subject span{ background-position: -40px -34px;}
 /*content_box_first*/
 .content_box_first{width: 100%; background: #f8f8f8;}
-.micor_box{width: 1203px; padding: 25px 0; margin: 0 auto 25px;  overflow: hidden;
-	border: 1px solid #ccc; border-top: 0;background: #fff;}
-.micor_list{margin-left: -2px; width: 2500px;}
-.micor_list a{display: block;float: left; width: 224px; height: 60px; padding: 0 10px; 
+#micor_box{position: relative; width: 1203px; padding: 25px 0; margin: 0 auto 25px;
+	overflow: hidden; border: 1px solid #ccc; background: #fff;}
+#micor_box_pre{display: none; position: absolute; left: 0; top: 25px; width: 14px;
+	height: 60px; background: url(../img/indexsprite.png) no-repeat; 
+	background-position:0 -69px}
+#micor_box_next{display: none; position: absolute; right: 0; top: 25px;width: 14px; 
+	height: 60px; background: url(../img/indexsprite.png) no-repeat; 
+	background-position: -27px -69px}
+#micor_list{margin-left: -1px; width: 6000px;height: 60px;}
+#micor_list a{display: block;float: left; width: 224px; height: 60px; padding: 0 10px; 
 	border-left: 1px solid #dddddd; text-align: center; line-height: 60px;
 	overflow: hidden; color:#000;}
-.micor_list a:hover{color: #31a030;}
+#micor_list a:hover{color: #31a030;}
 .micor_text_title{font-size: 16px; line-height: 28px;}
 .micor_text_subtitle{font-size: 12px; color: #ddd; line-height: 24px;}
 /*免费好课free_course*/
@@ -121,8 +154,8 @@
 .course_title .more{ height: 20px; line-height: 20px; 
 	font-size: 13px;color: #666;}
 /*.course_title span{line-height: 1;}*/
-.course_title .ico{ display: inline-block; width: 18px; height: 20px; margin-left: 3px;
-	background: url(../img/ui.png) no-repeat -1px -1673px;}
+.course_title .ico{ display: inline-block; width: 18px; height: 20px; 
+	margin-left: 3px; background: url(../img/ui.png) no-repeat -1px -1673px;}
 .course_title a:hover .ico{background: url(../img/ui.png) no-repeat -1px -1690px;}
 /*--------------course_box-------------*/
 .course_cont{width: 980px;}
@@ -138,8 +171,9 @@
 .course_item .money span{font-size: 14px; color: #bbb; text-decoration: line-through;}
 .course_siedrbar{width: 225px; height: 466px;}
 .course_siedrbar_tit{height: 102px; padding: 20px; background: #d486e7;}
-.course_siedrbar_tit a{display: block; width: 185px; font-size: 14px; line-height: 26px; 
-	color: #fff; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.course_siedrbar_tit a{display: block; width: 185px; font-size: 14px; 
+	line-height: 26px; color: #fff; overflow: hidden; text-overflow: ellipsis; 
+	white-space: nowrap;}
 .course_sidebar_img {width: 225px; height: 324px;}
 /*---------great_teacher--------*/
 .great_teacher{width: 1205px; margin: 0 auto;}
@@ -153,7 +187,8 @@
 .great_teacher_box li a .title{font-size: 14px;}
 .jigou{display: block; width: 220px; height: 220px; padding: 10px; background: #4d94dd}
 .jigou li{display: block;  width: 204px; line-height: 2.7; padding-left: 5px;}
-.jigou li a{ color: #fff; font-size: 14px; width: 130px; overflow: hidden; text-overflow: ellipsis;
+.jigou li a{ color: #fff; font-size: 14px; width: 130px; overflow: hidden; 
+	text-overflow: ellipsis;
     white-space: nowrap;}
 .jigou li a:hover{text-decoration: underline; color: #fff;}
 .jigou li span{color: #fff; font-size: 14px; float: right;}
@@ -163,7 +198,8 @@
 .big_img.mini.h{width: 225px; height: 390px; margin-right: 20px;}
 .course_img_box a{display: inline-block;float: left; text-decoration: none;}
 .course_img_box a:hover h3{color: #31a030;}
-.course_item.mini{position: relative;  width: 225px; height: 185px; margin: 0 20px 20px 0}
+.course_item.mini{position: relative;  width: 225px; height: 185px; 
+	margin: 0 20px 20px 0}
 /*---------------.course_siedrbar.mini---------------*/
 .course_siedrbar.mini{width: 225px; height: 390px;}
 .course_sidebar_img.mini{width: 225px; height: 248px;}
@@ -172,24 +208,28 @@
 .course_siedrbar_tit.third{height: 102px; padding: 20px; background: #d486e7;}
 .course_siedrbar_tit.fourth{height: 102px; padding: 20px; background: #eb7b7c;}
 /*------------cooperation---------*/
-.cooperation{background: #f8f8f8;}
+.cooperation{min-width: 1205px; background: #f8f8f8;}
 .cooperation_box{width: 1205px; margin: 20px auto 0; padding-top: 50px;}
 .cp_hr{width: 100%; border-bottom: 1px solid #ccc;}
 .cp_list{margin: 30px 0;}
 .cp_list li{float: left;}
 .cp_list li a{color: #999; padding-right: 25px; font-size: 14px;}
 /*-----------------footer--------------*/
-#footer{width: 100%; background: #474443;}
+#footer{min-width: 1205px; background: #474443;}
 .footer_box{width: 1205px; margin: 0 auto;}
 .footer_cont{width: 430px; padding: 50px 0 30px;}
-.footer_logo{width: 258px; height: 46px; float: left; background: url(../img/logoFoot.png) no-repeat;}
+.footer_logo{width: 258px; height: 46px; float: left; 
+	background: url(../img/logoFoot.png) no-repeat;}
 .footer_logo_text{float: left; margin: 20px 0; line-height: 24px; color: #ddd;}
 .about{float: left; color: #fff;width: 400px;}
 .about p{float: left;}
 .about a{display: block; float: left; width: 20px; height: 20px;margin: 3px 0 0 4px;}
-.about .weibo{background: url(../img/about_ico.png) no-repeat; background-position: -34px -52px;}
-.about .renren{background: url(../img/about_ico.png) no-repeat; background-position: -34px -72px;}
-.about .weixin{background: url(../img/about_ico.png) no-repeat; background-position: -7px -52px;}
+.about .weibo{background: url(../img/about_ico.png) no-repeat; 
+	background-position: -34px -52px;}
+.about .renren{background: url(../img/about_ico.png) no-repeat; 
+	background-position: -34px -72px;}
+.about .weixin{background: url(../img/about_ico.png) no-repeat; 
+	background-position: -7px -52px;}
 .footer_cont span{float: left; color: #bbb;}
 .footer_down{width: 490px; margin: 120px 0 30px;}
 .footer_down a{display: inline-block; color: #ddd; padding: 0 6px;}
@@ -198,17 +238,17 @@
 .apple{width: 100px; height: 32px; background: url(../img/download_icon.png) no-repeat;}
 .android{width: 100px; height: 32px; background: url(../img/download_icon.png) 0 -42px;}
 /*-----------------------back_top-------------------*/
-.back_top{position: fixed; right: 40px; bottom: 100px; border: 1px solid #ddd; 
+#back_top{position: fixed; right: 40px; bottom: 100px; border: 1px solid #ddd; 
 	border-radius: 5px; background: #fff;overflow: hidden;}
-.back_top a{display: block; text-decoration: none;}
-.back_top a:hover{background: #31a030;}
-.back_top a:hover .iconfont{color: #fff;}
-.back_top a:hover .iconfont.none{display: none;}
+#back_top a{display: block; text-decoration: none;}
+#back_top a:hover{background: #31a030;}
+#back_top a:hover .iconfont{color: #fff;}
+#back_top a:hover .iconfont.none{display: none;}
 .back_top_s{width: 60px; height: 60px; text-align: center;}
 .line_wrap{width: 50px; height: 0; border-bottom: 1px solid #ddd; margin-left: 5px;}
-.back_top .text{display: none; width: 30px; height: 40px; font-size: 14px; 
+#back_top .text{display: none; width: 30px; height: 40px; font-size: 14px; 
 	padding: 10px 15px; color: #fff; font-style: normal;}
-.back_top a:hover .text{display: block;}
+#back_top a:hover .text{display: block;}
 
 
 

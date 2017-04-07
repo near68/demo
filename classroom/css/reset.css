@@ -11,7 +11,8 @@ a:hover{text-decoration:underline;}
 sup{vertical-align:text-top;}
 sub{vertical-align:text-bottom;}
 legend{color:#000;}
-fieldset,img{border:0;}
+fieldset,img{border: 0;}
+img{vertical-align: middle;}
 button,input,select,textarea{font-size:100%;}
 table{border-collapse:collapse;border-spacing:0;}
 .clear{zoom: 1;}
