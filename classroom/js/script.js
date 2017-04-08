@@ -81,5 +81,71 @@ window.onload = function(){
 			this.style.backgroundPosition = -27+'px'+' '+-69+'px';
 		}
 	}//micorList-end
+	banner();
+	function banner(){
+		var bannerbg = document.getElementById('banner_bg')
+		var bannerImg = document.getElementById('banner_img');
+		var bImg = bannerImg.getElementsByTagName('img')[0];
+		var num = 0;
+		var timer = null;
+		// var optimer = null;
+		var bannerbgArr = ['#d32929','#5145FF','#D5EAEF','#000922','#6AC6F5'];
+		var imgarr = ['img/1.jpg','img/2.jpg','img/3.png','img/4.png','img/5.jpg'];
+		//初始化banner图片和背景颜色
+		bImg.src = imgarr[num];
+		bannerbg.style.backgroundColor = bannerbgArr[num];
+		bImg.onmouseover = function(){
+			clearInterval(timer);
+		}
+		bImg.onmouseout = function(){
+			Timer();
+		}
+		Timer();
+		function Timer(){
+			timer = setInterval(function(){
+			num++;
+			if(num==imgarr.length){num=0;}
+			bImg.src = imgarr[num];
+			bannerbg.style.backgroundColor = bannerbgArr[num];
+			// Optimer();
+		},2500)
+		}
+		}
+		// function Optimer(){
+		// 	var opacitynum = 0.3;
+		// 	bImg.style.opacity = opacitynum;
+		// 	optimer	= setInterval(function(){
+		// 			opacitynum+=0.1;
+		// 			bImg.style.opacity = opacitynum;
+		// 			if(opacitynum==1){
+		// 				clearInterval(Optimer);}
+		// 		},200)
+		// 	}
+		// Optimer();	
+		window.onscroll = function(){
+			var backTop = document.getElementById('back_top');
+			var ostop = document.documentElement.scrollTop || document.body.scrollTop;
+			if(ostop>=250){
+				backTop.style.display = 'block';
+				}else{
+					backTop.style.display = 'none';
+				}
+			}
+		backTop();
+		function backTop(){
+			var backTop = document.getElementById('back_top');
+			var AbackTop = backTop.getElementsByTagName('a')[2];
+			var ostop = document.documentElement.scrollTop || document.body.scrollTop;
+			if(ostop>=250){
+				backTop.style.display = 'block';
+				}else{
+					backTop.style.display = 'none';
+				}
+			AbackTop.onclick = function(){
+					document.documentElement.scrollTop = document.body.scrollTop = 0;
+			}
+			}
+		
+		
 
 }

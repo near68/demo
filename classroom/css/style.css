@@ -97,7 +97,7 @@
 #content{}
 /*banner*/
 .banner_box{}
-.banner_bg{width: 100%; min-height: 353px; height: 400px; background-color: #ccc;}
+.banner_bg{width: 100%; min-height: 353px; height: 400px;}
 .banner_content{ position: relative; width: 1205px; height: 400px; margin: 0 auto;}
 /*.banner_content a{display: block;}*/
 .banner_img img{ vertical-align:middle; width: 1205px; height: 400px;}
@@ -238,7 +238,7 @@
 .apple{width: 100px; height: 32px; background: url(../img/download_icon.png) no-repeat;}
 .android{width: 100px; height: 32px; background: url(../img/download_icon.png) 0 -42px;}
 /*-----------------------back_top-------------------*/
-#back_top{position: fixed; right: 40px; bottom: 100px; border: 1px solid #ddd; 
+#back_top{position: fixed; right: 40px; bottom: 100px; display: none; border: 1px solid #ddd; 
 	border-radius: 5px; background: #fff;overflow: hidden;}
 #back_top a{display: block; text-decoration: none;}
 #back_top a:hover{background: #31a030;}
