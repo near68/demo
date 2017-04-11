@@ -83,6 +83,7 @@ window.onload = function(){
 	}//micorList-end
 	banner();
 	function banner(){
+		var banCont =document.getElementById('banner_content');
 		var bannerbg = document.getElementById('banner_bg')
 		var bannerImg = document.getElementById('banner_img');
 		var opre = document.getElementById('ban_pre');
@@ -94,64 +95,65 @@ window.onload = function(){
 		var timer = null;
 		var bannerbgArr = ['#d32929','#5145FF','#D5EAEF','#000922','#6AC6F5'];
 		var imgarr = ['img/1.jpg','img/2.jpg','img/3.png','img/4.png','img/5.jpg'];
+		
 		//初始化banner和背景颜色
-		bImg.src = imgarr[num];
-		bannerbg.style.backgroundColor = bannerbgArr[num];
 		//动态添加入li
 		for(var i = 0; i < imgarr.length;i++){
 			oul.innerHTML += "<li></li>";
 			}
 		ali[num].className = 'select';//设置第一个li的className
-
+		//统一调用的banner_move
+		banMove();
+		function banMove(){
+			bImg.src = imgarr[num];
+			bannerbg.style.backgroundColor = bannerbgArr[num];
+			for(var i = 0; i <imgarr.length; i++){
+				ali[i].className = '';
+			}
+			ali[num].className = 'select';
+		}
+		for(var i = 0; i <imgarr.length; i++){
+			ali[i].index = i;
+			ali[i].onclick = function(){
+				for(var j = 0; j <imgarr.length; j++){
+					ali[j].className = '';
+				}
+			ali[this.index].className = 'select';
+			num=this.index;
+			banMove();
+			}
+		}
+		//点击opre&&onext
 		opre.onclick = function(){
 			num--;
 			if(num<0){num=bannerbgArr.length-1;}
-			bImg.src = imgarr[num];
-			bannerbg.style.backgroundColor = bannerbgArr[num];
-			for(var i = 0;i<imgarr.length;i++){
-				ali[i].className = '';
-				ali[num].className = 'select';
-			}
+			banMove();
 			}
 			onext.onclick = function(){
 			num++;
 			if(num>=bannerbgArr.length){num=0;}
-			bImg.src = imgarr[num];
-			bannerbg.style.backgroundColor = bannerbgArr[num];
-			for(var i = 0;i<imgarr.length;i++){
-				ali[i].className = '';
-				ali[num].className = 'select';
-				}
+			banMove();
 			}
-		bImg.onmouseover = function(){
+		//鼠标移入banner清除定时器和开启定时器
+		banCont.onmouseover = function(){
 			clearInterval(timer);
+			opre.style.display = 'block';
+			onext.style.display = 'block';
 		}
-		bImg.onmouseout = function(){
+		banCont.onmouseout = function(){
 			Timer();
+			opre.style.display = 'none';
+			onext.style.display = 'none';
 		}
+
 		Timer();
 		function Timer(){
 			timer = setInterval(function(){
 			num++;
 			if(num==imgarr.length){num=0;}
-			bImg.src = imgarr[num];
-			bannerbg.style.backgroundColor = bannerbgArr[num];
-			for(var i = 0;i<imgarr.length;i++){
-				ali[i].index = i;
-				ali[i].className = '';
-				ali[num].className = 'select';
-				ali[i].onclick = function go(){
-					num = this.index;
-					for(var i=0;i<imgarr.length;i++){
-					bImg.src = imgarr[this.index];
-					ali[i].className = '';
-				}
-				ali[this.index].className = 'select';
-				}
-			}
-			
+			banMove();
 			// Optimer();
-		},3000)
+			},3000)
 		}
 	}//banner
 		// function Optimer(){
