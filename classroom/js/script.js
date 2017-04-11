@@ -85,15 +85,44 @@ window.onload = function(){
 	function banner(){
 		var bannerbg = document.getElementById('banner_bg')
 		var bannerImg = document.getElementById('banner_img');
+		var opre = document.getElementById('ban_pre');
+		var onext = document.getElementById('ban_next');
 		var bImg = bannerImg.getElementsByTagName('img')[0];
+		var oul = bannerbg.getElementsByTagName('ul')[0];
+		var ali = oul.getElementsByTagName('li');
 		var num = 0;
 		var timer = null;
-		// var optimer = null;
 		var bannerbgArr = ['#d32929','#5145FF','#D5EAEF','#000922','#6AC6F5'];
 		var imgarr = ['img/1.jpg','img/2.jpg','img/3.png','img/4.png','img/5.jpg'];
-		//初始化banner图片和背景颜色
+		//初始化banner和背景颜色
 		bImg.src = imgarr[num];
 		bannerbg.style.backgroundColor = bannerbgArr[num];
+		//动态添加入li
+		for(var i = 0; i < imgarr.length;i++){
+			oul.innerHTML += "<li></li>";
+			}
+		ali[num].className = 'select';//设置第一个li的className
+
+		opre.onclick = function(){
+			num--;
+			if(num<0){num=bannerbgArr.length-1;}
+			bImg.src = imgarr[num];
+			bannerbg.style.backgroundColor = bannerbgArr[num];
+			for(var i = 0;i<imgarr.length;i++){
+				ali[i].className = '';
+				ali[num].className = 'select';
+			}
+			}
+			onext.onclick = function(){
+			num++;
+			if(num>=bannerbgArr.length){num=0;}
+			bImg.src = imgarr[num];
+			bannerbg.style.backgroundColor = bannerbgArr[num];
+			for(var i = 0;i<imgarr.length;i++){
+				ali[i].className = '';
+				ali[num].className = 'select';
+				}
+			}
 		bImg.onmouseover = function(){
 			clearInterval(timer);
 		}
@@ -107,10 +136,24 @@ window.onload = function(){
 			if(num==imgarr.length){num=0;}
 			bImg.src = imgarr[num];
 			bannerbg.style.backgroundColor = bannerbgArr[num];
+			for(var i = 0;i<imgarr.length;i++){
+				ali[i].index = i;
+				ali[i].className = '';
+				ali[num].className = 'select';
+				ali[i].onclick = function go(){
+					num = this.index;
+					for(var i=0;i<imgarr.length;i++){
+					bImg.src = imgarr[this.index];
+					ali[i].className = '';
+				}
+				ali[this.index].className = 'select';
+				}
+			}
+			
 			// Optimer();
-		},2500)
+		},3000)
 		}
-		}
+	}//banner
 		// function Optimer(){
 		// 	var opacitynum = 0.3;
 		// 	bImg.style.opacity = opacitynum;
@@ -121,31 +164,34 @@ window.onload = function(){
 		// 				clearInterval(Optimer);}
 		// 		},200)
 		// 	}
-		// Optimer();	
-		window.onscroll = function(){
-			var backTop = document.getElementById('back_top');
-			var ostop = document.documentElement.scrollTop || document.body.scrollTop;
-			if(ostop>=250){
-				backTop.style.display = 'block';
-				}else{
-					backTop.style.display = 'none';
-				}
-			}
+		// Optimer();
 		backTop();
-		function backTop(){
-			var backTop = document.getElementById('back_top');
-			var AbackTop = backTop.getElementsByTagName('a')[2];
-			var ostop = document.documentElement.scrollTop || document.body.scrollTop;
-			if(ostop>=250){
-				backTop.style.display = 'block';
-				}else{
-					backTop.style.display = 'none';
+		function backTop(){//回到顶部函数
+			var obt = document.getElementById('back_top')//右侧回到顶部3个按钮
+			var obta = obt.getElementsByTagName('a')[2];//回到顶部按钮（第三个a标签）
+			var cHeight = document.documentElement.clientHeight;
+			var ost = document.documentElement.scrollTop || document.body.scrollTop;
+			var bTimer = null;
+			var onoff = true;
+			ost >= cHeight ? obt.style.display = 'block' : obt.style.display = 'none';
+			window.onscroll = function(){
+				var ost = document.documentElement.scrollTop || document.body.scrollTop;
+				if(!onoff){
+					clearInterval(bTimer);
 				}
-			AbackTop.onclick = function(){
-					document.documentElement.scrollTop = document.body.scrollTop = 0;
+				ost >= cHeight ? obt.style.display = 'block' : obt.style.display = 'none';
+				onoff = false;
 			}
+			obta.onclick = function(){
+			bTimer = setInterval(function(){
+				var ost = document.documentElement.scrollTop || document.body.scrollTop;//滚动条偏移兼容IE和现代浏览器
+				onoff = true;
+				var speed = Math.floor(-ost/3);
+				document.documentElement.scrollTop = document.body.scrollTop = ost + speed;
+				// ost>=400 ? obt.style.display = 'block' : obt.style.display = 'none';//滚动条偏移大于等于400显示
+				if(ost==0){clearInterval(bTimer);}
+			},50)
 			}
+		}
 		
-		
-
 }

@@ -99,6 +99,15 @@
 .banner_box{}
 .banner_bg{width: 100%; min-height: 353px; height: 400px;}
 .banner_content{ position: relative; width: 1205px; height: 400px; margin: 0 auto;}
+.banner_content ul{position: absolute; bottom:15px; left: 50%; height: 30px; margin-left: -25px}
+.banner_content ul li{float: left; width: 10px; height: 10px;margin: 10px 10px 0 0; background: #ccc;}
+.banner_content ul .select{background: #fff;height: 20px; margin: 0 10px 0 0;}
+#ban_pre,#ban_next{position: absolute; top: 50%;z-index: 100; width: 40px; height: 70px;
+	margin-top: -35px; background: url(../img/indexSlideArrow.png) no-repeat;}
+#ban_pre{left: 240px; background-position: 0 0;}
+#ban_next{right: 240px; background-position: -66px 0;}
+#ban_pre:hover{background-position: 0 -95px;}
+#ban_next:hover{background-position: -66px -95px;}
 /*.banner_content a{display: block;}*/
 .banner_img img{ vertical-align:middle; width: 1205px; height: 400px;}
 .banner_sidebar{position: absolute; right: 0; top: 30px; z-index: 3; width: 225px;}
@@ -239,17 +248,52 @@
 .android{width: 100px; height: 32px; background: url(../img/download_icon.png) 0 -42px;}
 /*-----------------------back_top-------------------*/
 #back_top{position: fixed; right: 40px; bottom: 100px; display: none; border: 1px solid #ddd; 
-	border-radius: 5px; background: #fff;overflow: hidden;}
-#back_top a{display: block; text-decoration: none;}
+	border-radius: 5px; background: #fff;}
+#back_top a{ display: block; text-decoration: none;}
 #back_top a:hover{background: #31a030;}
 #back_top a:hover .iconfont{color: #fff;}
 #back_top a:hover .iconfont.none{display: none;}
-.back_top_s{width: 60px; height: 60px; text-align: center;}
+.back_top_s{ width: 60px; height: 60px; text-align: center;}
 .line_wrap{width: 50px; height: 0; border-bottom: 1px solid #ddd; margin-left: 5px;}
 #back_top .text{display: none; width: 30px; height: 40px; font-size: 14px; 
 	padding: 10px 15px; color: #fff; font-style: normal;}
 #back_top a:hover .text{display: block;}
-
+.bt_a2:hover .phone_code{
+	display: block;
+}
+.phone_code{
+	display: none;
+    position: absolute;
+    right: 60px;
+    top: -30px;
+    width: 200px;
+    padding: 10px 0 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    text-align: center;
+    background-color: #fff;
+}
+.phone_code span{
+	position: absolute;
+	top: 45px;
+	right: -14px;
+	border-width: 7px;
+	border-style: solid;
+	border-color: transparent transparent transparent #fff;
+}
+.phone_code div{
+	float: left;
+	width: 88px;
+	padding-right: 12px;
+}
+.phone_code img{
+	width: 85px;
+	height: 85px;
+	
+}
+.phone_code p{
+	color: #333;
+}
 
 
 
