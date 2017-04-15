@@ -10,7 +10,7 @@ $(document).ready(function() {
 			$(".ad>dl>dd").eq(i).addClass('active').siblings().removeClass('active');
 			$(".ad_pic>li").eq(i).fadeIn(2000).siblings().fadeOut();
 			$(".l_tit div").eq(i).show().siblings().hide();
-			},3000);
+			},3300);
 	}//move-end
 
 		$(".ad").hover(function() {
