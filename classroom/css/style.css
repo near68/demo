@@ -157,15 +157,12 @@
 .selling_course{margin-bottom: 40px;}
 .course_title{height: 24px; padding-bottom: 10px;}
 .course_title h2{color: #000; font-size: 24px; font-weight: normal; line-height: 1;}
-.course_title a{color: inherit; text-decoration: none; font-size: 12px; 
-	font-style: normal;line-height: 1;}
+.course_title a{display: inline-block; padding-top: 10px; text-decoration: none;}
 .course_title a:hover .more{color: #31a030;}
-.course_title .more{ height: 20px; line-height: 20px; 
-	font-size: 13px;color: #666;}
+.course_title .more{font-size: 13px;color: #666;}
 /*.course_title span{line-height: 1;}*/
-.course_title .ico{ display: inline-block; width: 18px; height: 20px; 
-	margin-left: 3px; background: url(../img/ui.png) no-repeat -1px -1673px;}
-.course_title a:hover .ico{background: url(../img/ui.png) no-repeat -1px -1690px;}
+.course_title .ico{ display: inline-block; width: 16px; height: 13px; margin-left: 3px; background: url(../img/ui.png) no-repeat -1px -1676px;}
+.course_title a:hover .ico{background: url(../img/ui.png) no-repeat -1px -1693px;}
 /*--------------course_box-------------*/
 .course_cont{width: 980px;}
 .course_cont .big_img{width: 225px; height: 466px; overflow: hidden;}

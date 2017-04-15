@@ -39,7 +39,7 @@ window.onload = function(){
 		},500);
 		}
 	}
-	}//nav-end
+	}// nav-end
 	micorList();
 	function micorList(){
 		var micorbox = document.getElementById('micor_box');
@@ -105,20 +105,16 @@ window.onload = function(){
 		//统一调用的banner_move
 		banMove();
 		function banMove(){
-			bImg.src = imgarr[num];
-			bannerbg.style.backgroundColor = bannerbgArr[num];
 			for(var i = 0; i <imgarr.length; i++){
 				ali[i].className = '';
 			}
+			bImg.src = imgarr[num];
+			bannerbg.style.backgroundColor = bannerbgArr[num];
 			ali[num].className = 'select';
 		}
 		for(var i = 0; i <imgarr.length; i++){
 			ali[i].index = i;
 			ali[i].onclick = function(){
-				for(var j = 0; j <imgarr.length; j++){
-					ali[j].className = '';
-				}
-			ali[this.index].className = 'select';
 			num=this.index;
 			banMove();
 			}
@@ -129,9 +125,9 @@ window.onload = function(){
 			if(num<0){num=bannerbgArr.length-1;}
 			banMove();
 			}
-			onext.onclick = function(){
+		onext.onclick = function(){
 			num++;
-			if(num>=bannerbgArr.length){num=0;}
+			num%=imgarr.length;
 			banMove();
 			}
 		//鼠标移入banner清除定时器和开启定时器
@@ -145,28 +141,14 @@ window.onload = function(){
 			opre.style.display = 'none';
 			onext.style.display = 'none';
 		}
-
 		Timer();
 		function Timer(){
 			timer = setInterval(function(){
-			num++;
-			if(num==imgarr.length){num=0;}
-			banMove();
-			// Optimer();
+			onext.onclick();
 			},3000)
 		}
-	}//banner
-		// function Optimer(){
-		// 	var opacitynum = 0.3;
-		// 	bImg.style.opacity = opacitynum;
-		// 	optimer	= setInterval(function(){
-		// 			opacitynum+=0.1;
-		// 			bImg.style.opacity = opacitynum;
-		// 			if(opacitynum==1){
-		// 				clearInterval(Optimer);}
-		// 		},200)
-		// 	}
-		// Optimer();
+	}// banner
+		
 		backTop();
 		function backTop(){//回到顶部函数
 			var obt = document.getElementById('back_top')//右侧回到顶部3个按钮
@@ -195,5 +177,5 @@ window.onload = function(){
 			},50)
 			}
 		}
-		
+	
 }
