@@ -10,7 +10,8 @@
 .class_img img:hover{transform: scale(1.15);}
 /*---------ico图片，左上角图片----------------------*/
 .new_ico{position: absolute; left: -2px; top: -2px; z-index: 111; width: 51px;
-	height: 51px; background: url(../img/onlu.png) no-repeat -64px -80px;}
+	height: 51px; 
+	background: url(../img/onlu.png) no-repeat -64px -80px;}
 .the_first_ico{position: absolute; left: -2px; top: -2px; z-index: 112; width: 51px;
 	height: 51px; 
 	background: url(../img/onlu.png) no-repeat 1px -80px;}
