@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jsonp-test</title>
+  <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+
+
+<input type="text" name="seach" id="seach">
+<input type="button" value="搜索" id="btn">
+<p id="msg"></p>
+<hr />
+<div id="list">
+<img src="" >
+</div>
+
+<script>
+$(function(){
+
+ $('#btn').click(function(){
+    $.ajax({
+      url: 'https://api.douban.com/v2/book/search?q='+$('#seach').val(),
+      type: 'GET',
+      dataType: 'jsonp',
+      success:function(data){
+        console.log(data)
+        $.each(data.books,function(i,books){
+          $("<p>").html(books.title).appendTo('#list');
+          $("<img> ").attr("src", books.image ).appendTo("#list");
+        })
+          
+         },//success
+      error:function(jqXHR){
+        alert(jqXHR.status)
+      }//error
+    })//ajax
+  })
+
+})//
+</script>
+</body>
+</html>
