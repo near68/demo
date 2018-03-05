@@ -1,199 +1,290 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <html lang="zh-CN">
+
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>企业站</title>
-	<link href="css/style.css" rel="stylesheet"type="text/css" />
-	<script src="js/setHomeSetFav.js" charset="gb2312"></script>
-	<script type="text/javascript" src="js/setHomeSetFav.js"></script>
-	<script type="text/javascript" src="js/myfocus-2.0.1.min.js" charset="utf-8"></script>
-<!--引入myFocus库-->
-<script type="text/javascript">
-myFocus.set({
-    id:'picbox',//焦点图盒子ID
-    pattern:'mF_fancy',//风格应用的名称
-    time:3,//切换时间间隔(秒)
-    trigger:'click',//触发切换模式:'click'(点击)/'mouseover'(悬停)
-    width:1000,//设置图片区域宽度(像素)
-    height:310,//设置图片区域高度(像素)
-    txtHeight:'default'//文字层高度设置(像素),'default'为默认高度，0为隐藏
-});
-</script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>企业站</title>
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <script src="js/setHomeSetFav.js" charset="gb2312"></script>
+  <script type="text/javascript" src="js/setHomeSetFav.js"></script>
+  <script type="text/javascript" src="js/myfocus-2.0.1.min.js" charset="utf-8"></script>
+  <!--引入myFocus库-->
+  <script type="text/javascript">
+    myFocus.set({
+      id: 'picbox', //焦点图盒子ID
+      pattern: 'mF_fancy', //风格应用的名称
+      time: 3, //切换时间间隔(秒)
+      trigger: 'click', //触发切换模式:'click'(点击)/'mouseover'(悬停)
+      width: 1000, //设置图片区域宽度(像素)
+      height: 310, //设置图片区域高度(像素)
+      txtHeight: 'default' //文字层高度设置(像素),'default'为默认高度，0为隐藏
+    });
+  </script>
 </head>
+
 <body>
-<div class="top">
-	<div class="top_content">
-		<ul>
-			<li><a href="#" onclick="">联系我们</a></li>
-			<li><a href="#" onclick="AddFavorite(window.lotaion,document.title)">加入收藏</a></li>
-			<li><a href="#" onclick="SetHome(window.lotaion)">设为首页</a></li>
-		</ul>
-	</div><!-- top_content-End -->
-</div><!-- Top-End -->
-<div class="wrap">
-	<div class="logo">
-		<div class="logo_left">
-			<img src="images/logo.jpg" alt="幕课网">
-		</div>
-		<div class="logo_right">
-		 	<img src="images/tel.jpg" >24小时服务热线：<span class="tel">123-456-7890</span>
-		</div>
-	</div><!-- logo-End -->
-<div class="nav">
-	<div class="nav_left">
-		<ul>
-			<li><a href="index.html">首页</a></li>
-			<li><a href="list.html">关于幕课</a></li>
-			<li><a href="news.html">新闻动态</a></li>
-			<li><a href="list.html">课程中心</a></li>
-			<li><a href="news.html">在线课程</a></li>
-			<li><a href="news.html">人才招聘</a></li>
-		</ul>
-	</div><!-- nav_left-End -->
-		
-	<div class="nav_right">
-		<form action="" method="post">
-			<input type="text" class="search">
-		</form>
+  <div class="top">
+    <div class="top_content">
+      <ul>
+        <li>
+          <a href="#" onclick="">联系我们</a>
+        </li>
+        <li>
+          <a href="#" onclick="AddFavorite(window.lotaion,document.title)">加入收藏</a>
+        </li>
+        <li>
+          <a href="#" onclick="SetHome(window.lotaion)">设为首页</a>
+        </li>
+      </ul>
+    </div>
+    <!-- top_content-End -->
+  </div>
+  <!-- Top-End -->
+  <div class="wrap">
+    <div class="logo">
+      <div class="logo_left">
+        <img src="images/logo.jpg" alt="幕课网">
+      </div>
+      <div class="logo_right">
+        <img src="images/tel.jpg">24小时服务热线：
+        <span class="tel">123-456-7890</span>
+      </div>
+    </div>
+    <!-- logo-End -->
+    <div class="nav">
+      <div class="nav_left">
+        <ul>
+          <li>
+            <a href="index.html">首页</a>
+          </li>
+          <li>
+            <a href="list.html">关于幕课</a>
+          </li>
+          <li>
+            <a href="news.html">新闻动态</a>
+          </li>
+          <li>
+            <a href="list.html">课程中心</a>
+          </li>
+          <li>
+            <a href="news.html">在线课程</a>
+          </li>
+          <li>
+            <a href="news.html">人才招聘</a>
+          </li>
+        </ul>
+      </div>
+      <!-- nav_left-End -->
 
-	</div>
-</div><!-- nav-End -->
+      <div class="nav_right">
+        <form action="" method="post">
+          <input type="text" class="search">
+        </form>
 
-
-<div class="ad"><!--ad焦点图盒子-->
-<div id="picbox">
-	<div class="loading"><img src="images/loading.gif" alt="请稍候..." /></div>
-  		<div class="pic"><!--内容列表(li数目可随意增减)-->
-  			<ul>
-        		<li><a href="#"><img src="images/ad.jpg"/></a></li>
-        		<li><a href="#"><img src="images/ad2.jpg"/></a></li>
-        		<li><a href="#"><img src="images/ad3.jpg"/></a></li>
-        		<li><a href="#"><img src="images/ad4.jpg"/></a></li>
-  			</ul>
-  		</div>
-</div><!-- picbox-End -->
-</div><!-- ad-End -->
-<div class="main">
-	<div class="news">
-		<div class="news_title">
-			<h2 class="news_title_l">新闻中心</h2><span class="news_title_r"><a href="#">More&gt;&gt;</a></span>
-		</div>
-		<div class="news_pic">
-			<img src="images/news.jpg" alt="news" />
-			<h2><a href="news.html">520木女神喊你来表白</a></h2>
-			<p>活动时间：5月20日—5月25日<br />
-          		获奖公布时间：5月26日<br />
-          <a href="news.html">Learn More&gt;&gt;</a></p>
-		</div>
-		<div class="news_content">
-			<ul>
-				<li><span>2016-8-13</span><a href="news.html">幕课网访谈-"怎么学好前端"</a></li>
-				<li><span>2016-8-12</span><a href="news.html">幕课网访谈-"怎么学PHP"</a></li>
-				<li><span>2016-8-11</span><a href="news.html">幕课网访谈-"前端那些事"</a></li>
-				<li><span>2016-8-11</span><a href="news.html">幕课网访谈-"前端Javascript如何学习"</a></li>
-			</ul>
-		</div>
-	</div><!-- news-End -->
+      </div>
+    </div>
+    <!-- nav-End -->
 
 
+    <div class="ad">
+      <!--ad焦点图盒子-->
+      <div id="picbox">
+        <div class="loading">
+          <img src="images/loading.gif" alt="请稍候..." />
+        </div>
+        <div class="pic">
+          <!--内容列表(li数目可随意增减)-->
+          <ul>
+            <li>
+              <a href="#">
+                <img src="images/ad.jpg" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/ad2.jpg" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/ad3.jpg" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/ad4.jpg" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- picbox-End -->
+    </div>
+    <!-- ad-End -->
+    <div class="main">
+      <div class="news">
+        <div class="news_title">
+          <h2 class="news_title_l">新闻中心</h2>
+          <span class="news_title_r">
+            <a href="#">More&gt;&gt;</a>
+          </span>
+        </div>
+        <div class="news_pic">
+          <img src="images/news.jpg" alt="news" />
+          <h2>
+            <a href="news.html">520木女神喊你来表白</a>
+          </h2>
+          <p>活动时间：5月20日—5月25日
+            <br /> 获奖公布时间：5月26日
+            <br />
+            <a href="news.html">Learn More&gt;&gt;</a>
+          </p>
+        </div>
+        <div class="news_content">
+          <ul>
+            <li>
+              <span>2016-8-13</span>
+              <a href="news.html">幕课网访谈-"怎么学好前端"</a>
+            </li>
+            <li>
+              <span>2016-8-12</span>
+              <a href="news.html">幕课网访谈-"怎么学PHP"</a>
+            </li>
+            <li>
+              <span>2016-8-11</span>
+              <a href="news.html">幕课网访谈-"前端那些事"</a>
+            </li>
+            <li>
+              <span>2016-8-11</span>
+              <a href="news.html">幕课网访谈-"前端Javascript如何学习"</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- news-End -->
 
-	<div class="midbar">
-		<div class="midbar_title">
-			<h2 class="midbar_title_l">课程中心</h2>
-			<span class="midbar_title_r"><a href="#">More&gt;&gt;</a></span>
-		</div><!-- title-End -->
-			
-		<div class="midbar_pic">
-			<img src="images/css.jpg" alt="mid_pic" />
-			<h2><a href="news.html">CSS圆角进化论</a></h2>
-			<p>CSS圆角的实现，经历了三大发展阶段：背景图片方式、CSS2.0+HTML标签模拟、CSS3.0圆角属性）。本案例详细讲解每一种的实现方式，并对实现的优缺点进行对比分析</p>
-		</div>
-		<div class="midbar_content">
-			<ul>
-				<li>PHP开发</li>
-				<li>前端开发</li>
-				<li>Java开发</li>
-				<li>Android开发</li>
-			</ul>	
-		</div><!-- midbar_content -->
-		
-	</div><!-- midbar-End -->
+
+
+      <div class="midbar">
+        <div class="midbar_title">
+          <h2 class="midbar_title_l">课程中心</h2>
+          <span class="midbar_title_r">
+            <a href="#">More&gt;&gt;</a>
+          </span>
+        </div>
+        <!-- title-End -->
+
+        <div class="midbar_pic">
+          <img src="images/css.jpg" alt="mid_pic" />
+          <h2>
+            <a href="news.html">CSS圆角进化论</a>
+          </h2>
+          <p>CSS圆角的实现，经历了三大发展阶段：背景图片方式、CSS2.0+HTML标签模拟、CSS3.0圆角属性）。本案例详细讲解每一种的实现方式，并对实现的优缺点进行对比分析</p>
+        </div>
+        <div class="midbar_content">
+          <ul>
+            <li>PHP开发</li>
+            <li>前端开发</li>
+            <li>Java开发</li>
+            <li>Android开发</li>
+          </ul>
+        </div>
+        <!-- midbar_content -->
+
+      </div>
+      <!-- midbar-End -->
 
 
 
 
-	<div class="sidebar">
-		<div class="sidebar_title">
-			<h2 class="sidebar_title_l">媒体聚焦</h2>
-			<span class="sidebar_title_r"><a href="#">More&gt;&gt;</a></span>
-		</div><!-- title-End -->
+      <div class="sidebar">
+        <div class="sidebar_title">
+          <h2 class="sidebar_title_l">媒体聚焦</h2>
+          <span class="sidebar_title_r">
+            <a href="#">More&gt;&gt;</a>
+          </span>
+        </div>
+        <!-- title-End -->
 
-		<div class="sidebar_video">
-			<embed height="140" width="220" class="player" allowFullScreenInteractive="true" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" AllowScriptAccess="always" rel="noreferrer" flashvars="vid=4036086&ref=http://www.acfun.tv/v/ac3019008" src="http://cdn.aixifan.com/player/ACFlashPlayer.out.swf?vid=4036086&ref=http://www.acfun.tv/v/ac3019008" type="application/x-shockwave-flash" allowfullscreen="true" quality="high" wmode="window"></embed>
-			
-		</div><!-- video-End -->
-		<div class="sidebar_app">
-		<a href="news.html"><img src="images/app.jpg"/></a>
-			
-		</div>
-		
-	</div><!-- sidebar-End -->
-</div>
+        <div class="sidebar_video">
+          <embed height="140" width="220" class="player" allowFullScreenInteractive="true" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"
+            AllowScriptAccess="always" rel="noreferrer" flashvars="vid=4036086&ref=http://www.acfun.tv/v/ac3019008" src="http://cdn.aixifan.com/player/ACFlashPlayer.out.swf?vid=4036086&ref=http://www.acfun.tv/v/ac3019008"
+            type="application/x-shockwave-flash" allowfullscreen="true" quality="high" wmode="window"></embed>
+
+        </div>
+        <!-- video-End -->
+        <div class="sidebar_app">
+          <a href="news.html">
+            <img src="images/app.jpg" />
+          </a>
+
+        </div>
+
+      </div>
+      <!-- sidebar-End -->
+    </div>
 
 
-</div><!-- wrap-End -->	
-<div class="footer">
-	<div class="footer_content">
-	<ul>
-		<li>关于
-			<ul>
-          		<li>品牌故事</li>
-          		<li>联系我们</li>
-          		<li>加入我们</li>
-          		<li>版权声明</li>
-       		</ul>
-		</li>
-		
-	</ul>
-	<ul>
-		<li>课程
-			<ul>
-	          <li>品牌故事</li>
-	          <li>联系我们</li>
-	          <li>加入我们</li>
-	          <li>版权声明</li>
-	       	</ul>
-		</li>
-		
-	</ul>
-	<ul>
-		<li>关注
-			<ul>
-	          <li>PHP开发</li>
-	          <li>前端开发</li>
-	          <li>JAVA开发</li>
-	          <li>Android开发</li>
-       		</ul>
-		</li>
-		
-	</ul>
-	<ul>
-		<li>留言
-			<ul>
-          		<li>意见反馈</li>
-          		<li>问题留言</li>
-          		<li>媒体联络</li>
-          		<li>在线客服</li>
-        	</ul>
-		</li>
-		
-	</ul>
-	<ul>
-		<li><img src="images/weixin.png" alt="" />微信关注</li>
-		<li><img src="images/qrcode.jpg" alt="" /></li>
-	</ul>
-	</div><!-- footer_content-End -->
-</div><!-- footer-End -->
+  </div>
+  <!-- wrap-End -->
+  <div class="footer">
+    <div class="footer_content">
+      <ul>
+        <li>关于
+          <ul>
+            <li>品牌故事</li>
+            <li>联系我们</li>
+            <li>加入我们</li>
+            <li>版权声明</li>
+          </ul>
+        </li>
+
+      </ul>
+      <ul>
+        <li>课程
+          <ul>
+            <li>品牌故事</li>
+            <li>联系我们</li>
+            <li>加入我们</li>
+            <li>版权声明</li>
+          </ul>
+        </li>
+
+      </ul>
+      <ul>
+        <li>关注
+          <ul>
+            <li>PHP开发</li>
+            <li>前端开发</li>
+            <li>JAVA开发</li>
+            <li>Android开发</li>
+          </ul>
+        </li>
+
+      </ul>
+      <ul>
+        <li>留言
+          <ul>
+            <li>意见反馈</li>
+            <li>问题留言</li>
+            <li>媒体联络</li>
+            <li>在线客服</li>
+          </ul>
+        </li>
+
+      </ul>
+      <ul>
+        <li>
+          <img src="images/weixin.png" alt="" />微信关注</li>
+        <li>
+          <img src="images/qrcode.jpg" alt="" />
+        </li>
+      </ul>
+    </div>
+    <!-- footer_content-End -->
+  </div>
+  <!-- footer-End -->
 </body>
+
 </html>
