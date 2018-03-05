@@ -33,6 +33,6 @@ $(function() {
 		var stime = new Date().getTime();
 		var etime = new Date("2019/1/1").getTime();
 		var timer_ = Math.ceil((etime-stime)/(24*60*60*1000))
-	document.getElementById("endtime").innerHTML = "距离2018年还有："+timer_+"天";
+	document.getElementById("endtime").innerHTML = "距离2019年还有："+timer_+"天";
 	}
 });
