@@ -83,18 +83,18 @@ window.onload = function(){
 	}//micorList-end
 	banner();
 	function banner(){
-		var banCont =document.getElementById('banner_content');
-		var bannerbg = document.getElementById('banner_bg')
-		var bannerImg = document.getElementById('banner_img');
-		var opre = document.getElementById('ban_pre');
-		var onext = document.getElementById('ban_next');
-		var bImg = bannerImg.getElementsByTagName('img')[0];
-		var oul = bannerbg.getElementsByTagName('ul')[0];
-		var ali = oul.getElementsByTagName('li');
-		var num = 0;
-		var timer = null;
+		var banCont 		= document.getElementById('banner_content');
+		var bannerbg 		= document.getElementById('banner_bg')
+		var bannerImg 	= document.getElementById('banner_img');
+		var opre 				= document.getElementById('ban_pre');
+		var onext 			= document.getElementById('ban_next');
+		var bImg				= bannerImg.getElementsByTagName('img')[0];
+		var oul 				= bannerbg.getElementsByTagName('ul')[0];
+		var ali 				= oul.getElementsByTagName('li');
+		var num 				= 0;
+		var timer 			= null;
 		var bannerbgArr = ['#d32929','#5145FF','#D5EAEF','#000922','#6AC6F5'];
-		var imgarr = ['img/1.jpg','img/2.jpg','img/3.png','img/4.png','img/5.jpg'];
+		var imgarr 			= ['img/1.jpg','img/2.jpg','img/3.png','img/4.png','img/5.jpg'];
 		
 		//初始化banner和背景颜色
 		//动态添加入li
@@ -112,6 +112,8 @@ window.onload = function(){
 			bannerbg.style.backgroundColor = bannerbgArr[num];
 			ali[num].className = 'select';
 		}
+
+		
 		for(var i = 0; i <imgarr.length; i++){
 			ali[i].index = i;
 			ali[i].onclick = function(){
